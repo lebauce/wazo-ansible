@@ -30,6 +30,10 @@ router_interface: "{{ ansible_default_ipv4.interface }}"
 router_rtpengine_list: udp:localhost:22222
 runtime: true
 
+wazo_consul_host: localhost
+wazo_consul_port: 8500
+wazo_consul_scheme: http
+
 ###################################################################################
 # The following variables must only be set for a customized value. The default
 # value (written in the comment) is handled by Debian packaging and subject to

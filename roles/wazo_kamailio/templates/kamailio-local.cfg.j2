@@ -11,8 +11,10 @@
 /* add API http timeout */
 #!define HTTP_API_TIMEOUT 5000
 
+{% if kamailio_rtpengine_list is defined and kamailio_rtpengine_list %}
 /* set the list of RTPengine instances */
 #!define RTPENGINE_LIST "{{ kamailio_rtpengine_list }}"
+{% endif %}
 
 /* add listen protocol, address and port / advertise (optional) */
 {% if kamailio_advertise_address is defined and kamailio_advertise_address and kamailio_advertise_port is defined and kamailio_advertise_port %}
